@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'FormTemplate-Driven';
+
+  //@ViewChild('registryForm') form!: NgForm;
+
+  onSubmit(registryForm: NgForm) {
+    console.log("NgForm obj in template: ", registryForm.value);
+
+  }
 }
